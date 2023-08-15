@@ -150,6 +150,14 @@ export default function BloomFilter() {
         <a className="underline text-blue-700" href="https://en.wikipedia.org/wiki/Bloom_filter">
           Wiki
         </a>
+        {/* <a href="https://twitter.com/minho42_" rel="nofollow me">
+          Twitter
+        </a> */}
+        <a className="" href="https://twitter.com/minho42_" target="_blank" rel="nofollow me">
+          <div className="fixed right-0 bottom-0 bg-black text-white no-underline text-sm px-3 py-1 rounded-tl-xl">
+            @minho42_
+          </div>
+        </a>
       </div>
 
       <div>
