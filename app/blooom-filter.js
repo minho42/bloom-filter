@@ -141,7 +141,7 @@ export default function BloomFilter() {
   useEffect(() => {
     setTotalBitsArray([]);
     setRecentSearchBitsArray([]);
-  }, [selectedAlgorithms]);
+  }, [selectedAlgorithms, bitSize]);
 
   return (
     <div className="flex flex-col w-full space-y-3">
@@ -164,14 +164,14 @@ export default function BloomFilter() {
             />
           </label>
           <input
-            className="bg-blue-600 text-white font-medium rounded-lg px-2 py-1 cursor-pointer"
+            className="bg-blue-600 text-white font-medium rounded-lg px-3 py-1 cursor-pointer"
             type="submit"
             value="Insert"
           />
         </form>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div>
         <form onSubmit={(e) => handleSearch(e)} className="space-x-2">
           <label>
             Search text
@@ -187,12 +187,12 @@ export default function BloomFilter() {
             />
           </label>
           <input
-            className="bg-pink-500 text-white font-medium rounded-lg px-2 py-1 cursor-pointer"
+            className="bg-pink-500 text-white font-medium rounded-lg px-3 py-1 cursor-pointer"
             type="submit"
             value="Search"
           />
         </form>
-        <div className="font-bold">{searchResultText}</div>
+        <div className="text-2xl font-bold">{searchResultText}</div>
       </div>
 
       <div className="flex flex-col">
@@ -205,7 +205,7 @@ export default function BloomFilter() {
               onClick={() => toggleAlgorith(algo)}
               className={`${
                 selectedAlgorithms.includes(algo) ? "bg-black text-white " : ""
-              } border border-black rounded-lg px-2 py-0.5 cursor-pointer text-sm font-medium`}
+              } border border-black rounded-lg px-2 py-1 cursor-pointer font-medium`}
             >
               {algo}
             </div>
