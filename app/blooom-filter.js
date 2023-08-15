@@ -119,7 +119,7 @@ export default function BloomFilter() {
   };
 
   const handleSizeChange = (newSize) => {
-    if (newSize <= 0) newSize = 0;
+    if (newSize <= 10) newSize = 10;
     if (newSize > 500) newSize = 500;
     setTotalBitsArray([]);
     setBitSize(newSize);
