@@ -22,7 +22,6 @@ function textToNumberArray(text, len, selectedAlgorithms) {
 
 function TotalBits({ len, totalBitsArray, recentSearchBitsArray }) {
   const bits = Array.from({ length: len });
-  console.log(recentSearchBitsArray);
   return (
     <div className="flex flex-col items-start py-2">
       <div className="font-bold">Total</div>
@@ -147,12 +146,7 @@ export default function BloomFilter() {
     <div className="flex flex-col w-full space-y-3">
       <div className="flex items-center gap-3">
         <div className="text-2xl font-semibold">Bloom filter visualized</div>
-        <a className="underline text-blue-700" href="https://en.wikipedia.org/wiki/Bloom_filter">
-          Wiki
-        </a>
-        {/* <a href="https://twitter.com/minho42_" rel="nofollow me">
-          Twitter
-        </a> */}
+
         <a className="" href="https://twitter.com/minho42_" target="_blank" rel="nofollow me">
           <div className="fixed right-0 bottom-0 bg-black text-white no-underline text-sm px-3 py-1 rounded-tl-xl">
             @minho42_
@@ -204,7 +198,7 @@ export default function BloomFilter() {
       </div>
 
       <div className="flex flex-col">
-        <div>Hash functions used ({selectedAlgorithms.length}) </div>
+        <div className="font-bold">Hash functions used ({selectedAlgorithms.length}) </div>
 
         <div className="flex flex-wrap items-center gap-2">
           {totalAlgorithms.map((algo) => (
@@ -222,7 +216,7 @@ export default function BloomFilter() {
       </div>
 
       <div>
-        <p>Size</p>
+        <div className="font-bold">Size</div>
         <div className="flex items-center gap-1">
           <button
             onClick={() => handleSizeChange(bitSize - 10)}
